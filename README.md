@@ -1,4 +1,4 @@
-# SvelteKit: Aplicativo de pedidos via WhatsApp
+# SvelteKit & WordPress: desenvolvedor Full Stack
 
 ## Links importantes  
 Demonstração:  
