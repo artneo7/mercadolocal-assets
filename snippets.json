@@ -1182,5 +1182,619 @@
 			"$: $lista.produtos.length && calcularTotal();"
 		],
 		"description": "a50.5"
+	},
+	"a51": {
+		"prefix": "a51",
+		"body": [
+			"import { lista } from \"$$lib/stores\"",
+			"",
+			"function abrirLista() {",
+			"  $$lista.aberto = !$$lista.aberto;",
+			"}"
+		],
+		"description": "a51"
+	},
+	"a53.1": {
+		"prefix": "a53.1",
+		"body": [
+			"const produtoExiste = $$lista.produtos.findIndex((produto) => produto.nome === nome);",
+			"console.log(produtoExiste);"
+		],
+		"description": "a53.1"
+	},
+	"a53.2": {
+		"prefix": "a53.2",
+		"body": [
+			"// caso exista, aumentar quantidade",
+			"// caso não exista, adicionar novo produto"
+		],
+		"description": "a53.2"
+	},
+	"a53.3": {
+		"prefix": "a53.3",
+		"body": [
+			"if (produtoExiste !== -1) {",
+			"  console.log($$lista.produtos[produtoExiste]);",
+			"}"
+		],
+		"description": "a53.3"
+	},
+	"a54.1": {
+		"prefix": "a54.1",
+		"body": [
+			"<section class=\"dados\">",
+			"  <h1>Formulário</h1>",
+			"</section>",
+			"",
+			"<style>",
+			"  .dados {",
+			"    position: absolute;",
+			"    top: 0;",
+			"    right: 0;",
+			"    background-color: #fff;",
+			"    width: 50%;",
+			"    height: 100%;",
+			"    padding: 32px 24px;",
+			"  }",
+			"</style>"
+		],
+		"description": "a54.1"
+	},
+	"a54.2": {
+		"prefix": "a54.2",
+		"body": [
+			"import Dados from \"$$lib/Dados.svelte\";"
+		],
+		"description": "a54.2"
+	},
+	"a55.1": {
+		"prefix": "a55.1",
+		"body": [
+			"<script>",
+			"  import { CheckCircle, X } from 'lucide-svelte';",
+			"</script>",
+			"",
+			"<form>",
+			"  <label for=\"nome\">",
+			"    <span>Nome</span>",
+			"    <input type=\"text\" name=\"nome\" id=\"nome\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"email\">",
+			"    <span>E-mail</span>",
+			"    <input type=\"email\" name=\"email\" id=\"email\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"cep\">",
+			"    <span>CEP</span>",
+			"    <input type=\"cep\" name=\"cep\" id=\"cep\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"numero\">",
+			"    <span>Número / Complemento</span>",
+			"    <input type=\"numero\" name=\"numero\" id=\"numero\">",
+			"  </label>",
+			"",
+			"  <label for=\"endereco\">",
+			"    <span>Endereço</span>",
+			"    <input type=\"endereco\" name=\"endereco\" id=\"endereco\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"bairro\">",
+			"    <span>Bairro</span>",
+			"    <input type=\"bairro\" name=\"bairro\" id=\"bairro\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"cidade\">",
+			"    <span>Cidade</span>",
+			"    <input type=\"cidade\" name=\"cidade\" id=\"cidade\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"estado\">",
+			"    <span>Estado</span>",
+			"    <input type=\"estado\" name=\"estado\" id=\"estado\" required>",
+			"  </label>",
+			"",
+			"  <button type=\"submit\" class=\"btn btn--salvar\" title=\"Salvar dados\"><CheckCircle color=\"#fff\"/></button>",
+			"",
+			"  <button type=\"button\" class=\"btn\" title=\"Fechar\"><X/></button>",
+			"</form>",
+			"",
+			"<style>",
+			"  form {",
+			"    display: grid;",
+			"    grid-template-columns: 1fr 1fr;",
+			"    gap: 12px 20px;",
+			"  }",
+			"  label {",
+			"    display: flex;",
+			"    flex-direction: column;",
+			"    gap: 6px;",
+			"  }",
+			"  span {",
+			"    font-size: calc(14 / 16 * 1rem);",
+			"    color: var(--principal-2);",
+			"  }",
+			"  input {",
+			"    border: 1px solid var(--bg-2);",
+			"    height: 40px;",
+			"    padding: 8px;",
+			"    color: var(--principal);",
+			"  }",
+			"  input:focus-visible {",
+			"    outline: 1px solid var(--principal);",
+			"    outline-offset: -1px;",
+			"  }",
+			"  .btn {",
+			"    display: flex;",
+			"    align-items: center;",
+			"    justify-content: center;",
+			"    width: 40px;",
+			"    height: 40px;",
+			"    background-color: var(--bg-2);",
+			"    position: absolute;",
+			"    top: 0px;",
+			"    right: 0px;",
+			"    transition: 125ms;",
+			"  }",
+			"  .btn:hover {",
+			"    background-color: var(--bg-hover);",
+			"  }",
+			"  .btn--salvar {",
+			"    background-color: var(--destaque);",
+			"    right: 48px;",
+			"  }",
+			"  .btn--salvar:hover {",
+			"    filter: brightness(1.05);",
+			"    background-color: var(--destaque);",
+			"  }",
+			"  label:has(input[required]) span::after {",
+			"    content: '*';",
+			"    color: var(--alt);",
+			"    margin-left: 2px;",
+			"  }",
+			"</style>"
+		],
+		"description": "a55.1"
+	},
+	"a55.2": {
+		"prefix": "a55.2",
+		"body": [
+			"<script>",
+			"  import Formulario from \"$$lib/Formulario.svelte\";",
+			"</script>",
+			"",
+			"<section class=\"dados\">",
+			"  <Formulario/>",
+			"</section>"
+		],
+		"description": "a55.2"
+	},
+	"a55.3": {
+		"prefix": "a55.3",
+		"body": [
+			"export const dados = writable({",
+			"  aberto: false,",
+			"  nome: '',",
+			"  email: '',",
+			"  cep: '',",
+			"  numero: '',",
+			"  endereco: '',",
+			"  bairro: '',",
+			"  cidade: '',",
+			"  estado: ''",
+			"});"
+		],
+		"description": "a55.3"
+	},
+	"a56.1": {
+		"prefix": "a56.1",
+		"body": [
+			"import { dados } from '$$lib/stores';",
+			"$: console.log($dados);"
+		],
+		"description": "a56.1"
+	},
+	"a56.2": {
+		"prefix": "a56.2",
+		"body": [
+			"<form>",
+			"  <label for=\"nome\">",
+			"    <span>Nome</span>",
+			"    <input bind:value={$$dados.nome} type=\"text\" name=\"nome\" id=\"nome\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"email\">",
+			"    <span>E-mail</span>",
+			"    <input bind:value={$$dados.email} type=\"email\" name=\"email\" id=\"email\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"cep\">",
+			"    <span>CEP</span>",
+			"    <input bind:value={$$dados.cep} type=\"cep\" name=\"cep\" id=\"cep\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"numero\">",
+			"    <span>Número / Complemento</span>",
+			"    <input bind:value={$$dados.numero} type=\"numero\" name=\"numero\" id=\"numero\">",
+			"  </label>",
+			"",
+			"  <label for=\"endereco\">",
+			"    <span>Endereço</span>",
+			"    <input bind:value={$$dados.endereco} type=\"endereco\" name=\"endereco\" id=\"endereco\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"bairro\">",
+			"    <span>Bairro</span>",
+			"    <input bind:value={$$dados.bairro} type=\"bairro\" name=\"bairro\" id=\"bairro\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"cidade\">",
+			"    <span>Cidade</span>",
+			"    <input bind:value={$$dados.cidade} type=\"cidade\" name=\"cidade\" id=\"cidade\" required>",
+			"  </label>",
+			"",
+			"  <label for=\"estado\">",
+			"    <span>Estado</span>",
+			"    <input bind:value={$$dados.estado} type=\"estado\" name=\"estado\" id=\"estado\" required>",
+			"  </label>",
+			"",
+			"  <button type=\"button\" class=\"btn\" title=\"Fechar\"><X/></button>",
+			"</form>"
+		],
+		"description": "a56.2"
+	},
+	"a57.1": {
+		"prefix": "a57.1",
+		"body": [
+			"// salvar dados",
+			"function salvarDados() {",
+			"  console.log('Dados salvos');",
+			"}"
+		],
+		"description": "a57.1"
+	},
+	"a57.2": {
+		"prefix": "a57.2",
+		"body": [
+			"localStorage.setItem('dados', JSON.stringify($$dados));"
+		],
+		"description": "a57.2"
+	},
+	"a59": {
+		"prefix": "a59",
+		"body": [
+			"// puxar endereço via cep",
+			"async function puxarEndereco(cep) {",
+			"  const resposta = await fetch(`https://viacep.com.br/ws/$${cep}/json/`);",
+			"  const resultado = await resposta.json();",
+			"  $$dados.endereco = resultado.logradouro;",
+			"  $$dados.bairro = resultado.bairro;",
+			"  $$dados.cidade = resultado.localidade;",
+			"  $$dados.estado = resultado.uf;",
+			"",
+			"  return resultado;",
+			"}"
+		],
+		"description": "a59"
+	},
+	"a60.1": {
+		"prefix": "a60.1",
+		"body": [
+			"// fechar dados",
+			"function fecharDados() {",
+			"  $$dados.aberto = false;",
+			"}"
+		],
+		"description": "a60.1"
+	},
+	"a60.2": {
+		"prefix": "a60.2",
+		"body": [
+			"function abrirDados() {",
+			"  $$dados.aberto = !$$dados.aberto;",
+			"}"
+		],
+		"description": "a60.2"
+	},
+	"a61.1": {
+		"prefix": "a61.1",
+		"body": [
+			"import { onMount } from 'svelte';",
+			"",
+			"onMount(() => {",
+			"  console.log('Função ocorreu');",
+			"});"
+		],
+		"description": "a61.1"
+	},
+	"a61.2": {
+		"prefix": "a61.2",
+		"body": [
+			"// verificar dados no localStorage",
+			"if (localStorage.getItem('dados')) {",
+			"  let data = JSON.parse(localStorage.getItem('dados'));",
+			"  console.log(data);",
+			"}"
+		],
+		"description": "a61.2"
+	},
+	"a61.3": {
+		"prefix": "a61.3",
+		"body": [
+			"$$dados.nome = data.nome;",
+			"$$dados.email = data.email;",
+			"$$dados.cep = data.cep;",
+			"$$dados.numero = data.numero;",
+			"$$dados.endereco = data.endereco;",
+			"$$dados.bairro = data.bairro;",
+			"$$dados.cidade = data.cidade;",
+			"$$dados.estado = data.estado;"
+		],
+		"description": "a61.3"
+	},
+	"a63.1": {
+		"prefix": "a63.1",
+		"body": [
+			"// deletar dados",
+			"function deletarDados() {",
+			"  // remover dados localStorage",
+			"  localStorage.removeItem('dados');",
+			"",
+			"  // logout",
+			"  $$dados.logado = false;",
+			"",
+			"  // resetar dados",
+			"  $$dados.nome = '';",
+			"  $$dados.email = '';",
+			"  $$dados.cep = '';",
+			"  $$dados.numero = '';",
+			"  $$dados.endereco = '';",
+			"  $$dados.bairro = '';",
+			"  $$dados.cidade = '';",
+			"  $$dados.estado = '';",
+			"}"
+		],
+		"description": "a63.1"
+	},
+	"a63.2": {
+		"prefix": "a63.2",
+		"body": [
+			".btn--deletar {",
+			"  background-color: var(--alt);",
+			"  right: 48px;",
+			"}",
+			".btn--deletar:hover {",
+			"  background-color: var(--alt);",
+			"  filter: brightness(1.05);",
+			"}"
+		],
+		"description": "a63.2"
+	},
+	"a63.3": {
+		"prefix": "a63.3",
+		"body": [
+			"// login",
+			"$$dados.logado = true;"
+		],
+		"description": "a63.3"
+	},
+	"a64": {
+		"prefix": "a64",
+		"body": [
+			"<div class=\"btns\">",
+			"  <button on:click={abrirLista}><ShoppingCart/></button>",
+			"  {#if $$dados.logado}",
+			"  <button on:click={abrirDados}><User2/></button>",
+			"  {:else}",
+			"  <button on:click={abrirDados}><IconeNotificacao/></button>",
+			"  {/if}",
+			"</div>"
+		],
+		"description": "a64"
+	},
+	"a65.1": {
+		"prefix": "a65.1",
+		"body": [
+			"<p>{$$dados.nome}</p>",
+			"<p>{$$dados.endereco}, {$$dados.numero}</p>",
+			"<p>{$$dados.cidade}, {$$dados.estado}</p>",
+			"<p>{$$dados.cep}</p>"
+		],
+		"description": "a65.1"
+	},
+	"a65.2": {
+		"prefix": "a65.2",
+		"body": [
+			"// adicionar padrão ao número / complemento",
+			"if (!$$dados.numero) {",
+			"  $$dados.numero = 's/n';",
+			"}"
+		],
+		"description": "a65.2"
+	},
+	"a65.3": {
+		"prefix": "a65.3",
+		"body": [
+			"{#if $$dados.logado}",
+			"<p>{$$dados.nome}</p>",
+			"<p>{$$dados.endereco}, {$$dados.numero}</p>",
+			"<p>{$$dados.cidade}, {$$dados.estado}</p>",
+			"<p>{$$dados.cep}</p>",
+			"{:else}",
+			"<button on:click={abrirDados} class=\"btn\">Insira os seus dados para<br> enviar o pedido</button>",
+			"{/if}"
+		],
+		"description": "a65.3"
+	},
+	"a65.4": {
+		"prefix": "a65.4",
+		"body": [
+			"// abrir dados",
+			"function abrirDados() {",
+			"  $$dados.aberto = true;",
+			"}"
+		],
+		"description": "a65.4"
+	},
+	"a65.5": {
+		"prefix": "a65.5",
+		"body": [
+			".btn {",
+			"  font-family: var(--fonte-primaria);",
+			"  font-size: calc(14 / 16 * 1rem);",
+			"  background-color: var(--bg-2);",
+			"  padding: 12px 16px;",
+			"  align-self: flex-start;",
+			"  transition: 125ms;",
+			"}",
+			".btn:hover {",
+			"  background-color: var(--bg-hover);",
+			"}"
+		],
+		"description": "a65.5"
+	},
+	"a66": {
+		"prefix": "a66",
+		"body": [
+			"// WhatsaApp",
+			"export function enviarWhatsApp() {",
+			"  return 'https://api.whatsapp.com/send?phone=5519981128000&text=Testando';",
+			"}"
+		],
+		"description": "a66"
+	},
+	"a67.1": {
+		"prefix": "a67.1",
+		"body": [
+			"// WhatsaApp",
+			"export function enviarWhatsApp(dados, produtos, total) {",
+			"  if (!dados || !produtos || !total) return;",
+			"",
+			"  let conteudo = 'Testando';",
+			"  ",
+			"  return `https://api.whatsapp.com/send?phone=5519981128000&text=\\${conteudo}`;",
+			"}"
+		],
+		"description": "a67.1"
+	},
+	"a67.2": {
+		"prefix": "a67.2",
+		"body": [
+			"let conteudo =",
+			"`👤 ${dados.nome} ${dados.endereco}, ${dados.numero}, ${dados.bairro}, ${dados.cidade}, ${dados.estado}`;"
+		],
+		"description": "a67.2"
+	},
+	"a67.3": {
+		"prefix": "a67.3",
+		"body": [
+			"// preparar conteudo para link do WhatsApp",
+			"conteudo = encodeURIComponent(conteudo);"
+		],
+		"description": "a67.3"
+	},
+	"a68.1": {
+		"prefix": "a68.1",
+		"body": [
+			"conteudo = conteudo + `\\n\\n📝 Pedido\\n`;"
+		],
+		"description": "a68.1"
+	},
+	"a68.2": {
+		"prefix": "a68.2",
+		"body": [
+			"// lista de produtos",
+			"produtos.forEach(produto => {",
+			"  conteudo += `• ${produto.quantidade}x ${produto.nome} (R$ ${produto.preco}/${produto.metrica}) R$ ${calcularValor(produto.preco, produto.quantidade)}\\n`",
+			"});"
+		],
+		"description": "a68.2"
+	},
+	"a68.3": {
+		"prefix": "a68.3",
+		"body": [
+			"// total",
+			"conteudo += `\\nTotal: R$ ${total}`;"
+		],
+		"description": "a68.3"
+	},
+	"a69.1": {
+		"prefix": "a69.1",
+		"body": [
+			"@media(max-width: 1250px) {",
+			"  form {",
+			"    grid-template-columns: 1fr;",
+			"  }",
+			"}"
+		],
+		"description": "a69.1"
+	},
+	"a69.2": {
+		"prefix": "a69.2",
+		"body": [
+			"@media(max-width: 1250px) {",
+			"  .dados {",
+			"    overflow-y: scroll;",
+			"  }",
+			"}",
+			"@media(max-width: 800px) {",
+			"  .dados {",
+			"    width: 100%;",
+			"  }",
+			"}"
+		],
+		"description": "a69.2"
+	},
+	"a69.3": {
+		"prefix": "a69.3",
+		"body": [
+			"@media(max-width: 500px) {",
+			"  .btns {",
+			"    position: fixed;",
+			"    top: 0;",
+			"    right: 0;",
+			"    z-index: 1;",
+			"    height: fit-content;",
+			"  }",
+			"}"
+		],
+		"description": "a69.3"
+	},
+	"a69.4": {
+		"prefix": "a69.4",
+		"body": [
+			"@media(max-width: 1000px) {",
+			"  .conteudo {",
+			"    grid-template-columns: 1fr;",
+			"    overflow-y: scroll;",
+			"    margin: -1px;",
+			"  }",
+			"  .lista {",
+			"    grid-column: unset;",
+			"  }",
+			"  .enviar__container {",
+			"    position: unset;",
+			"    width: fit-content;",
+			"  }",
+			"  .separador {",
+			"    display: none;",
+			"  }",
+			"  .nome {",
+			"    flex-shrink: unset;",
+			"  }",
+			"}"
+		],
+		"description": "a69.4"
+	},
+	"a70": {
+		"prefix": "a70",
+		"body": [
+			"<svelte:head>",
+			"  <title>Mercado Local</title>",
+			"  <meta name=\"description\" content=\"Aplicativo de pedidos via WhatsApp\" />",
+			"</svelte:head>"
+		],
+		"description": "a70"
 	}
 }
