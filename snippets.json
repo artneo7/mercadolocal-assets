@@ -146,7 +146,7 @@
 	"a20.1": {
 		"prefix": "a20.1",
 		"body": [
-			"import '$lib/global.css';"
+			"import '$$lib/global.css';"
 		],
 		"description": "a20.1"
 	},
