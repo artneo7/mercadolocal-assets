@@ -658,18 +658,16 @@
 	"a38.1": {
 		"prefix": "a38.1",
 		"body": [
-			"<section class=\"produtos\">",
-			"  {#each produtos as produto}",
-			"  <Produto/>",
-			"  {/each}",
-			"</section>"
+			"{#each produtos as produto}",
+			"<Produto/>",
+			"{/each}"
 		],
 		"description": "a38.1"
 	},
 	"a38.2": {
 		"prefix": "a38.2",
 		"body": [
-			"<Produto nome={produto.nome} preco={produto.preco} metrica={produto.metrica} img={produto.img} thumbnail={produto.thumbnail} alt={produto.alt} />"
+			"<Produto nome={produto.nome} preco={produto.preco} metrica={produto.metrica} thumbnail={produto.thumbnail} alt={produto.alt} />"
 		],
 		"description": "a38.2"
 	},
