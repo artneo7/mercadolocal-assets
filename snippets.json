@@ -367,7 +367,18 @@
 			"    <Ornamento1/>",
 			"    <Ornamento2/>",
 			"  </div>",
-			"</section>"
+			"</section>",
+			"",
+			"<style>",
+			"  .hero {",
+			"    position: relative;",
+			"  }",
+			"  img {",
+			"    height: 360px;",
+			"    width: 100%;",
+			"    object-fit: cover;",
+			"  }",
+			"</style>"
 		],
 		"description": "a27.3"
 	},
