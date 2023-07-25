@@ -651,7 +651,7 @@
 	"a37.2": {
 		"prefix": "a37.2",
 		"body": [
-			"import { PUBLIC_URL_DATABASE } from \"$env/static/public\";"
+			"import { PUBLIC_URL_DATABASE } from \"$$env/static/public\";"
 		],
 		"description": "a37.2"
 	},
