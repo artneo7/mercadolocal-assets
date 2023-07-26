@@ -1088,27 +1088,23 @@
 	"a48.2": {
 		"prefix": "a48.2",
 		"body": [
-			"// adicionar produto ao pedido",
-			"function adicionarProduto() {",
-			"  $$lista.produtos = [...$$lista.produtos,",
-			"    {",
-			"      nome,",
-			"      quantidade,",
-			"      preco,",
-			"      metrica",
-			"    }",
-			"  ]",
-			"}",
-			"$: console.log($$lista);"
+			"$$lista.produtos = [...$$lista.produtos,",
+			"  {",
+			"    nome,",
+			"    quantidade,",
+			"    preco,",
+			"    metrica",
+			"  }",
+			"]"
 		],
 		"description": "a48.2"
 	},
 	"a48.3": {
 		"prefix": "a48.3",
 		"body": [
-			"{#if $lista.produtos.length}",
+			"{#if $$lista.produtos.length}",
 			"<div class=\"itens\">",
-			"  {#each $lista.produtos as item}",
+			"  {#each $$lista.produtos as item}",
 			"  <div class=\"item\">",
 			"    <span class=\"nome\">{item.quantidade}x {item.nome} (R$ {item.preco}/{item.metrica})</span>",
 			"    <span class=\"separador\"></span>",
