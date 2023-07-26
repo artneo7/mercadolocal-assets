@@ -1185,7 +1185,7 @@
 		"prefix": "a50.5",
 		"body": [
 			"// toda vez que o pedido atualiza, recalcular o total",
-			"$: $lista.produtos.length && calcularTotal();"
+			"$: $$lista.produtos.length && calcularTotal();"
 		],
 		"description": "a50.5"
 	},
