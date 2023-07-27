@@ -1723,7 +1723,7 @@
 		"prefix": "a68.3",
 		"body": [
 			"// total",
-			"conteudo += `\\nTotal: R$ ${total}`;"
+			"conteudo += `\\nTotal: R$ \\${total}`;"
 		],
 		"description": "a68.3"
 	},
