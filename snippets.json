@@ -1474,7 +1474,7 @@
 		"body": [
 			"// puxar endereço via cep",
 			"async function puxarEndereco(cep) {",
-			"  const resposta = await fetch(`https://viacep.com.br/ws/$${cep}/json/`);",
+			"  const resposta = await fetch(`https://viacep.com.br/ws/\\${cep}/json/`);",
 			"  const resultado = await resposta.json();",
 			"  $$dados.endereco = resultado.logradouro;",
 			"  $$dados.bairro = resultado.bairro;",
