@@ -1397,7 +1397,7 @@
 		"prefix": "a56.1",
 		"body": [
 			"import { dados } from '$$lib/stores';",
-			"$: console.log($dados);"
+			"$: console.log($$dados);"
 		],
 		"description": "a56.1"
 	},
@@ -1444,7 +1444,9 @@
 			"    <span>Estado</span>",
 			"    <input bind:value={$$dados.estado} type=\"estado\" name=\"estado\" id=\"estado\" required>",
 			"  </label>",
-			"",
+			"  ",
+			"  <button type=\"submit\" class=\"btn btn--salvar\" title=\"Salvar dados\"><CheckCircle color=\"#fff\"/></button>",
+			"  ",
 			"  <button type=\"button\" class=\"btn\" title=\"Fechar\"><X/></button>",
 			"</form>"
 		],
