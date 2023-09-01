@@ -1804,5 +1804,45 @@
 			"</svelte:head>"
 		],
 		"description": "a70"
+	},
+	"a76.1": {
+		"prefix": "a76.1",
+		"body": [
+			"// resetar lista",
+			"function resetarLista() {",
+			"  $$lista.produtos = [];",
+			"  total = 0;",
+			"}"
+		],
+		"description": "a76.1"
+	},
+	"a76.2": {
+		"prefix": "a76.2",
+		"body": [
+			"<button on:click={resetarLista} class=\"resetar\" title=\"Limpar lista\"><X size={14} /> resetar</button>"
+		],
+		"description": "a76.2"
+	},
+	"a76.3": {
+		"prefix": "a76.3",
+		"body": [
+			".resetar {",
+			"  font-family: var(--fonte-primaria);",
+			"  display: flex;",
+			"  gap: 4px;",
+			"  border: 1px solid var(--principal-2);",
+			"  border-radius: 16px;",
+			"  align-items: center;",
+			"  font-size: calc(12 / 16 * 1rem);",
+			"  padding: 4px 8px;",
+			"  margin-left: 8px;",
+			"  opacity: .8;",
+			"  transition: 125ms;",
+			"}",
+			".resetar:hover {",
+			"  opacity: 1;",
+			"}"
+		],
+		"description": "a76.3"
 	}
 }
